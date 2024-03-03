@@ -28,13 +28,13 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 1rem; */
-  text-align: center;
 }
 
 .header-title {
   font-size: 22px;
   font-weight: 500;
   color: #222;
+  text-align: center;
 }
 
 .new-quote-btn {
@@ -59,4 +59,41 @@ body {
   color: #555555;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.text-input {
+  width: -webkit-fill-available;
+  font-size: 18px;
+  padding: 3px;
+  margin-top: 10px;
+}
+
+.category-warp {
+  margin-top: 2rem;
+}
+.input-group-wrap {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.equal {
+  font-size: 2rem;
+}
+.formula-warp {
+  margin-top: 2rem;
+  background-color: #dddeee;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.formula-warp h3 {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.formula-warp p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.3;
 }

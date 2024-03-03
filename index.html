@@ -12,8 +12,42 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <h1 class="header-title">Multiple Converter From Scratch</h1>
+        <div>
+            <h1 class="header-title">Multiple Converter</h1>
+            <div class="divider"></div>
+            <div class="category-warp">
+                <label class="lead" for="category-select">Select Category</label>
+                <select class="text-input" id="category-select">
+                    <option value="mass">Mass</option>
+                    <option value="length">Length</option>
+                    <option value="area">Area</option>
+                </select>
+            </div>
+
+            <div class="input-group-wrap">
+                <div>
+                    <input type="text" class="text-input" id="left-inp">
+                    <select class="text-input" id="left-select">
+                        <option value="KM">Kilometer</option>
+                        <option value="M">Meter</option>
+                        <option value="CM">Centimeter</option>
+                    </select>
+                </div>
+                <div class="equal">=</div>
+                <div>
+                    <input type="text" class="text-input" id="left-inp">
+                    <select class="text-input" id="left-select">
+                        <option value="KM">Kilometer</option>
+                        <option value="M">Meter</option>
+                        <option value="CM">Centimeter</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="formula-warp">
+            <h3>Formula</h3>
+            <p id="formula-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio deserunt porro
+                ipsum voluptatum! Alias officiis ab exercitationem eligendi fugit!</p>
         </div>
     </div>
     <script src="./app.js"></script>
