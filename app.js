@@ -58,6 +58,33 @@ function main() {
     });
 
 
+
+    categorySelect.addEventListener('change', function () {
+
+        const converterName = categorySelect.value;
+        const units = converter[converterName].units;
+
+        //handel left select
+        removeAllChild(leftSelect);
+        const leftOptions = Object.keys(units);
+        leftOptions.forEach((item) => {
+            addOption(leftSelect, { value: item, text: units[item] })
+        })
+
+
+
+        //handel right select
+        removeAllChild(rightSelect);
+        const rightOptions = Object.keys(units);
+        rightOptions.forEach((item) => {
+            addOption(rightSelect, { value: item, text: units[item] })
+        });
+
+        rightSelect.getElementsByTagName('option')[2].selected = 'selected';
+    });
+
+
+
     const converterName = categorySelect.value;
     const units = converter[converterName].units;
 
