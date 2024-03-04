@@ -9,11 +9,57 @@ const converter = {
         name: "Area",
         units: {
             squareKm: 'Square Kilometer',
-            squareCm: 'Square Meter',
+            squarcM: 'Square Meter',
             squareMile: 'Square Mile',
             squareYard: 'Square Yard',
             squareFoot: 'Square Foot',
         },
+        variants: {
+            'squareKm:squarcM': {
+                formula: 'multiply the area value by 1000000',
+                calculation(n) {
+                    return n * 1000000;
+                }
+            },
+            'squareKm:squareMile': {
+                formula: 'divide the area value by 2.59',
+                calculation(n) {
+                    return n / 2.59;
+                }
+            },
+            'squareKm:squareYard': {
+                formula: 'Multipy the area value by 1196000',
+                calculation(n) {
+                    return n * 1196000;
+                }
+            },
+            'squareKm:squareFoot': {
+                formula: 'Multipy the area value by 10760000',
+                calculation(n) {
+                    return n * 10760000;
+                }
+            },
+
+            'squarcM:squareKm': {},
+            'squarcM:squareMile': {},
+            'squarcM:squareYard': {},
+            'squarcM:squareFoot': {},
+
+            'squareMile:squareKm': {},
+            'squareMile:squareMile': {},
+            'squareMile:squareYard': {},
+            'squareMile:squareFoot': {},
+
+            'squareYard:squareKm': {},
+            'squareYard:squarcM': {},
+            'squareYard:squareMile': {},
+            'squareYard:squareFoot': {},
+
+            'squareFoot:squareKm': {},
+            'squareFoot:squarcM': {},
+            'squareFoot:squareMile': {},
+            'squareFoot:squareFoot': {},
+        }
     },
     mass: {
         name: "Mass",
