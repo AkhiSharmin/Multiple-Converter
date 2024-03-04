@@ -6,39 +6,69 @@ window.onload = function () {
 
 const converter = {
     area: {
-        name: "Area"
+        name: "Area",
+        units: {
+            squareKm: 'Square Kilometer',
+            squareCm: 'Square Meter',
+            squareMile: 'Square Mile',
+            squareYard: 'Square Yard',
+            squareFoot: 'Square Foot',
+        },
     },
     mass: {
-        name: "Mass"
+        name: "Mass",
+        units: {
+            tonne: 'Tone',
+            kilogram: 'Kilogram',
+            gram: 'Gram',
+            milligram: 'Milligram'
+        },
     },
     length: {
-        name: "Length"
-    },
-    volume: {
-        name: "Volume"
+        name: "Length",
+        units: {
+            kilometer: 'Kilometer',
+            meter: 'Meter',
+            centimeter: 'Centimeter',
+            millimeter: 'Millimeter'
+        },
     },
     time: {
-        name: "Time"
+        name: "Time",
+        units: {
+            second: 'Second',
+            minute: 'Minute',
+            hour: "Hour",
+            day: 'Day'
+        }
     },
-    DataTransfer: {
-        name: "Data Transfer Rate"
-    },
-    pressure: {
-        name: "Pressure"
-    }
 
 }
 
 
 function main() {
     const categorySelect = document.getElementById('category-select');
+    const leftSelect = document.getElementById('left-select');
+    const rightSelect = document.getElementById('right-select');
 
-
-    const coveterKeys = Object.keys(converter);
+    const coveterKeys = Object.keys(converter).sort();
     removeAllChild(categorySelect)
     coveterKeys.forEach((item) => {
         addOption(categorySelect, { value: item, text: converter[item].name })
     });
+
+
+    //handel left select
+    const converterName = categorySelect.value;
+    console.log(converter[converterName]);
+
+
+
+
+
+
+
+    //handel right select
 }
 
 
