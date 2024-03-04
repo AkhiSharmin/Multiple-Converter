@@ -52,23 +52,32 @@ function main() {
     const rightSelect = document.getElementById('right-select');
 
     const coveterKeys = Object.keys(converter).sort();
-    removeAllChild(categorySelect)
+    removeAllChild(categorySelect);
     coveterKeys.forEach((item) => {
         addOption(categorySelect, { value: item, text: converter[item].name })
     });
 
 
-    //handel left select
     const converterName = categorySelect.value;
-    console.log(converter[converterName]);
+    const units = converter[converterName].units;
 
-
-
-
+    //handel left select
+    removeAllChild(leftSelect);
+    const leftOptions = Object.keys(units);
+    leftOptions.forEach((item) => {
+        addOption(leftSelect, { value: item, text: units[item] })
+    })
 
 
 
     //handel right select
+    removeAllChild(rightSelect);
+    const rightOptions = Object.keys(units);
+    rightOptions.forEach((item) => {
+        addOption(rightSelect, { value: item, text: units[item] })
+    });
+
+    rightSelect.getElementsByTagName('option')[2].selected = 'selected';
 }
 
 
